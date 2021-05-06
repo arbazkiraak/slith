@@ -1,5 +1,8 @@
 # Slither Action
 
+Imported from `https://github.com/luisfontes19/slither-static-analysis-action` and Modified.
+
+
 This action is a wrapper for slither, a static vulnerability tool for Solidity smart contracts.
 
 ## Inputs
