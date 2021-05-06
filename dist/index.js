@@ -1393,9 +1393,7 @@ module.exports = (() => {
                             case 4:
                                 e.sent();
                                 c.info("Installing slither");
-                                return [4, l.exec("sudo pip3 install slither-analyzer", undefined, {
-                                    cwd: "slither-" + a
-                                })];
+                                return [4, l.exec("sudo pip3 install slither-analyzer")];
                             case 4:
                                 e.sent();
                                 if (!f) return [3, 6];
