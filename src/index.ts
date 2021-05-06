@@ -81,10 +81,11 @@ const prepare = async () => {
 
 
   core.info("Unzipping slither");
-  await exec.exec(" unzip /tmp/slither.zip -d .");
+  await exec.exec("unzip /tmp/slither.zip -d .");
 
 
   core.info("Installing slither");
+  await exec.exec("ls");
   await exec.exec("sudo python3 setup.py develop");
   // core.info("Downloading slither");
   // await exec.exec("git clone https://github.com/trailofbits/slither");
