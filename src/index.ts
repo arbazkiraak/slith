@@ -72,7 +72,7 @@ const run = async () => {
 const prepare = async () => {
   core.info("Install dependencies");
   await exec.exec("sudo apt-get install -y git python3 python3-setuptools wget software-properties-common");
-  await exec.exec("sudo add-apt-repository ppa:ethereum/ethereum");
+  await exec.exec("sudo add-apt-repository ppa:ethereum/ethereum -y");
   await exec.exec("sudo apt-get update -y");
   await exec.exec("sudo apt-get install solc -y");
 
