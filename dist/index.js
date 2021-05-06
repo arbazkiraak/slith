@@ -1382,18 +1382,18 @@ module.exports = (() => {
                                 e.sent();
                                 c.info("installing solc");
                                 return [4, l.exec("sudo apt-get install solc -y")];
+//                             case 4:
+//                                 e.sent();
+//                                 c.info("Downloading slither");
+//                                 return [4, l.exec("wget https://github.com/crytic/slither/archive/" + a + ".zip -O /tmp/slither.zip")];
+//                             case 5:
+//                                 e.sent();
+//                                 c.info("Unzipping slither");
+//                                 return [4, l.exec(" unzip /tmp/slither.zip -d .")];
                             case 4:
                                 e.sent();
-                                c.info("Downloading slither");
-                                return [4, l.exec("wget https://github.com/crytic/slither/archive/" + a + ".zip -O /tmp/slither.zip")];
-                            case 5:
-                                e.sent();
-                                c.info("Unzipping slither");
-                                return [4, l.exec(" unzip /tmp/slither.zip -d .")];
-                            case 6:
-                                e.sent();
                                 c.info("Installing slither");
-                                return [4, l.exec("sudo python3 setup.py install", undefined, {
+                                return [4, l.exec("sudo pip3 install slither-analyzer", undefined, {
                                     cwd: "slither-" + a
                                 })];
                             case 4:
