@@ -77,16 +77,19 @@ const prepare = async () => {
   await exec.exec("sudo add-apt-repository ppa:ethereum/ethereum -y");
   await exec.exec("sudo apt-get install solc -y");
 
-  await exec.exec(`wget https://github.com/crytic/slither/archive/${slitherVersion}.zip -O /tmp/slither.zip`);
+  await exec.exec("pip3 install slither-analyzer");
+
+  // await exec.exec(`wget https://github.com/crytic/slither/archive/${slitherVersion}.zip -O /tmp/slither.zip`);
 
 
-  core.info("Unzipping slither");
-  await exec.exec("unzip /tmp/slither.zip -d .");
+  // core.info("Unzipping slither");
+  // await exec.exec("unzip /tmp/slither.zip -d .");
 
 
-  core.info("Installing slither");
-  await exec.exec("ls");
-  await exec.exec(`sudo python3 slither-${slitherVersion}/setup.py develop`);
+  // core.info("Installing slither");
+  // await exec.exec("ls");
+  // await exec.exec(`sudo python3 slither-${slitherVersion}/setup.py develop`);
+
   // core.info("Downloading slither");
   // await exec.exec("git clone https://github.com/trailofbits/slither");
 
