@@ -86,7 +86,7 @@ const prepare = async () => {
 
   core.info("Installing slither");
   await exec.exec("ls");
-  await exec.exec("sudo python3 setup.py develop");
+  await exec.exec(`sudo python3 slither-${slitherVersion}/setup.py develop`);
   // core.info("Downloading slither");
   // await exec.exec("git clone https://github.com/trailofbits/slither");
 
