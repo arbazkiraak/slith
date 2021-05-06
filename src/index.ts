@@ -72,6 +72,9 @@ const run = async () => {
 const prepare = async () => {
   core.info("Install dependencies");
   await exec.exec("sudo apt-get install -y git python3 python3-setuptools wget software-properties-common");
+  await exec.exec("sudo add-apt-repository ppa:ethereum/ethereum");
+  await exec.exec("sudo apt-get update -y");
+  await exec.exec("sudo apt-get install solc -y");
 
   core.info("Downloading slither");
   await exec.exec(`wget https://github.com/crytic/slither/archive/${slitherVersion}.zip -O /tmp/slither.zip`);
