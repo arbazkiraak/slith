@@ -1373,7 +1373,7 @@ module.exports = (() => {
                             case 1:
                                 e.sent();
                                 c.info("Downloading solc");
-                                return [4, l.exec("sudo add-apt-repository ppa:ethereum/ethereum -y && sudo apt-get update -y && sudo apt-get install solc -y")];
+                                return [4, l.exec("sudo add-apt-repository ppa:ethereum/ethereum -y")];
                             case 2:
                                 e.sent();
                                 c.info("updating solc");
