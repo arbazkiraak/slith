@@ -1376,13 +1376,21 @@ module.exports = (() => {
                                 return [4, l.exec("sudo add-apt-repository ppa:ethereum/ethereum -y && sudo apt-get update -y && sudo apt-get install solc -y")];
                             case 2:
                                 e.sent();
+                                c.info("updating solc");
+                                return [4, l.exec("sudo apt-get update -y")];
+                            case 3:
+                                e.sent();
+                                c.info("installing solc");
+                                return [4, l.exec("sudo apt-get install solc -y")];
+                            case 4:
+                                e.sent();
                                 c.info("Downloading slither");
                                 return [4, l.exec("wget https://github.com/crytic/slither/archive/" + a + ".zip -O /tmp/slither.zip")];
-                            case 3:
+                            case 5:
                                 e.sent();
                                 c.info("Unzipping slither");
                                 return [4, l.exec(" unzip /tmp/slither.zip -d .")];
-                            case 4:
+                            case 6:
                                 e.sent();
                                 c.info("Installing slither");
                                 return [4, l.exec("sudo python3 setup.py install", undefined, {
